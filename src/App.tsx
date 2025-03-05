@@ -1,34 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+
+function Prompt() {
+  return <span className="text-green-400">$</span>;
+}
+
+type LinkProps = {
+  href: string;
+  children: React.ReactNode;
+};
+
+function Link({ href, children }: LinkProps) {
+  return (
+    <a href={href} className="decoration-blue-500 underline hover:overline">
+      {children}
+    </a>
+  );
+}
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="grid h-screen">
+      <main className="place-self-center">
+        <h1 className="text-3xl font-bold tracking-wide py-4">
+          @janecakemaster
+        </h1>
+        <div
+          className={`text-left font-mono rounded-md p-4 mx-auto bg-white text-[#1e1e1e] dark:bg-[#1e1e1e] dark:text-[#f1f1f1] shadow-md shadow-[#000000]/10`}
+        >
+          <p>
+            <Prompt /> echo{" "}
+            <span className="decoration-fuchsia-400 decoration-dotted underline hover:overline">
+              $JANECAKEMASTER
+            </span>
+          </p>
+          <p>
+            fullstack js/ts engineer from the dirty jerz 🗽 nyc, az
+            🌵...
+          </p>
+          <p>currently living in sf 🌉</p>
+          <p>
+            <Link href="https://github.com/janecakemaster">github</Link>{" "}
+            <Link href="https://linkedin.com/in/janecakemaster">linkedin</Link>{" "}
+          </p>
+        </div>
+      </main>
+    </div>
   )
 }
 
