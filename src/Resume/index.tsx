@@ -14,7 +14,7 @@ function ResumeItem({ company, description, items }: ResumeItemProps) {
     <li>
       <button
         onClick={() => setShowDetails(!showDetails)}
-        className="hover:text-blue-400 transition-colors text-left w-full grid grid-cols-[200px_1fr] gap-4"
+        className="hover:text-blue-400 transition-colors text-left"
       >
         <span>{company}</span>
         <span className="opacity-75">{description}</span>
