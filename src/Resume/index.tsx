@@ -3,24 +3,26 @@ import { Prompt } from "./Prompt";
 
 type ResumeItemProps = {
   company: string;
+  description: string;
   items: string[];
 };
 
-function ResumeItem({ company, items }: ResumeItemProps) {
+function ResumeItem({ company, description, items }: ResumeItemProps) {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
     <li>
       <button
         onClick={() => setShowDetails(!showDetails)}
-        className="hover:text-blue-400 transition-colors text-left w-full"
+        className="hover:text-blue-400 transition-colors text-left w-full grid grid-cols-[200px_1fr] gap-4"
       >
-        {company}
+        <span>{company}</span>
+        <span className="opacity-75">{description}</span>
       </button>
       {showDetails && (
         <ul className="ml-4 mt-2 space-y-1 text-sm opacity-80">
           {items.map((item, i) => (
-            <li key={i}>• {item}</li>
+            <li key={i}>* {item}</li>
           ))}
         </ul>
       )}
@@ -36,7 +38,8 @@ function Resume() {
       </p>
       <ul className="space-y-2 mt-2">
         <ResumeItem
-          company="Volley: voice powered games"
+          company="Volley"
+          description="voice powered games"
           items={[
             "mobile apps",
             "game platform architecture",
@@ -46,7 +49,8 @@ function Resume() {
         />
 
         <ResumeItem
-          company="Vercel: frontend cloud"
+          company="Vercel"
+          description="frontend cloud"
           items={[
             "enterprise billing infrastructure",
             "usage data pipelines",
@@ -55,17 +59,20 @@ function Resume() {
         />
 
         <ResumeItem
-          company="Splice: music creation"
+          company="Splice"
+          description="music creation"
           items={["platform modernization", "golang"]}
         />
 
         <ResumeItem
-          company="Mixmax: sales engagement"
+          company="Mixmax"
+          description="sales engagement"
           items={["Sidechat", "email collaboration", "typescript", "react"]}
         />
 
         <ResumeItem
-          company="BDG: media"
+          company="BDG"
+          description="media"
           items={[
             "auth",
             "content migration",
@@ -78,7 +85,8 @@ function Resume() {
         />
 
         <ResumeItem
-          company="Baublebar: ecommerce"
+          company="Baublebar"
+          description="ecommerce"
           items={[
             "product detail page",
             "design system",
@@ -88,7 +96,8 @@ function Resume() {
         />
 
         <ResumeItem
-          company="Vimeo: videos"
+          company="Vimeo"
+          description="videos"
           items={[
             "mobile web",
             "accessibility",
@@ -99,22 +108,26 @@ function Resume() {
         />
 
         <ResumeItem
-          company="Loverly: wedding planning"
+          company="Loverly"
+          description="wedding planning"
           items={["wordpress", "javascript", "php"]}
         />
 
         <ResumeItem
-          company="Salesforce: CRM"
+          company="Salesforce"
+          description="CRM"
           items={["UI framework", "developer sandbox", "javascript", "java"]}
         />
 
         <ResumeItem
-          company="nRelate: content recommendation"
+          company="nRelate"
+          description="content recommendation"
           items={["wordpress", "jquery", "php"]}
         />
 
         <ResumeItem
           company="Columbia University"
+          description="undergrad"
           items={["B.A. Computer Science", "a cappella", "hackathons"]}
         />
       </ul>
