@@ -1,34 +1,5 @@
-import { useState } from "react";
 import { Prompt } from "./Prompt";
-
-type ResumeItemProps = {
-  company: string;
-  description: string;
-  items: string[];
-};
-
-function ResumeItem({ company, description, items }: ResumeItemProps) {
-  const [showDetails, setShowDetails] = useState(false);
-
-  return (
-    <li>
-      <button
-        onClick={() => setShowDetails(!showDetails)}
-        className="hover:text-blue-400 transition-colors text-left"
-      >
-        <span>{company}</span>
-        <span className="opacity-75">{description}</span>
-      </button>
-      {showDetails && (
-        <ul className="ml-4 mt-2 space-y-1 text-sm opacity-80">
-          {items.map((item, i) => (
-            <li key={i}>* {item}</li>
-          ))}
-        </ul>
-      )}
-    </li>
-  );
-}
+import { ResumeItem } from "./ResumeItem";
 
 function Resume() {
   return (
