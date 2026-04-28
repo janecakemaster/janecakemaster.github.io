@@ -1,3 +1,5 @@
+export const linkClassName = "decoration-blue-500 underline hover:overline";
+
 type LinkProps = {
   href: string;
   children: React.ReactNode;
@@ -5,7 +7,7 @@ type LinkProps = {
 
 export function Link({ href, children }: LinkProps) {
   return (
-    <a href={href} className="decoration-blue-500 underline hover:overline">
+    <a href={href} className={linkClassName}>
       {children}
     </a>
   );

@@ -1,4 +1,4 @@
-import { Prompt } from "./Prompt";
+import { Prompt } from "../components/Prompt";
 import { ResumeItem } from "./ResumeItem";
 
 function Resume() {

@@ -9,14 +9,12 @@ function App() {
   const [useResume, setUseResume] = useState(false);
 
   return (
-    <div className="grid h-screen font-mono">
-      <main className="place-self-center">
+    <div className="grid min-h-screen font-mono">
+      <main className="justify-self-center self-start pt-24">
         <h1 className="text-3xl font-bold tracking-wide py-4">
           @janecakemaster
         </h1>
-        <div
-          className={`text-left rounded-md p-4 bg-white text-[#1e1e1e] dark:bg-[#1e1e1e] dark:text-[#f1f1f1] shadow-md shadow-[#000000]/10`}
-        >
+        <div className="w-[36rem] text-left rounded-md p-4 bg-white text-[#1e1e1e] dark:bg-[#1e1e1e] dark:text-[#f1f1f1] shadow-md shadow-[#000000]/10">
           {useResume ? <Resume /> : <Home />}
         </div>
         <div className="text-left place-self-center pt-4">
