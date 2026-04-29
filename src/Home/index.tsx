@@ -6,8 +6,15 @@ function Home() {
       <p>
         <Prompt /> echo <span className="text-pink-400">$JANECAKEMASTER</span>
       </p>
-      <p>engineer and engineering leader from the dirty jerz 🗽 nyc, az 🌵...</p>
-      <p>currently living in sf 🌉</p>
+      <p>engineer and engineering leader</p>
+      <p className="pt-2">
+        <Prompt /> echo <span className="text-pink-400">$ORIGIN</span>
+      </p>
+      <p>dirty jerz 🗽 nyc</p>
+      <p className="pt-2">
+        <Prompt /> echo <span className="text-pink-400">$HOME</span>
+      </p>
+      <p>az 🌵</p>
     </>
   );
 }
