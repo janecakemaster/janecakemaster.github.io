@@ -115,10 +115,10 @@ export function Resume() {
         {roles.map((role) => (
           <div className="role" key={`${role.company}-${role.dates}`}>
             <div className="role-header">
+              <span className="role-dates">{role.dates}</span>
               <span className="role-title">
                 {role.company}, {role.location} · {role.title}
               </span>
-              <span className="role-dates">{role.dates}</span>
             </div>
             {role.bullets.length > 0 && (
               <ul>

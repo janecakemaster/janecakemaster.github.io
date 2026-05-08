@@ -1,6 +1,6 @@
 @page {
   size: letter;
-  margin: 0.3in;
+  margin: 0.2in;
 }
 
 .resume-page {
@@ -45,6 +45,11 @@
 .resume-page .summary {
   margin: 6pt 0;
   font-style: italic;
+  text-align: center;
+}
+
+.resume-page .technologies {
+  text-align: center;
 }
 
 .resume-page .role {
@@ -52,11 +57,10 @@
   page-break-inside: avoid;
 }
 
-.resume-page .role-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1em;
+.resume-page .role-header::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .resume-page .role-title {
@@ -66,6 +70,8 @@
 .resume-page .role-dates {
   font-style: italic;
   white-space: nowrap;
+  float: right;
+  margin-left: 1em;
 }
 
 .resume-page .role ul {
@@ -108,8 +114,8 @@ body:has(.resume-page) {
   background: #f5f5f5;
 }
 
-@media resume {
-  .no-resume {
+@media print {
+  .no-print {
     display: none !important;
   }
 
