@@ -1,11 +1,11 @@
 import "./App.css";
 import Home from "./Home";
-import { Print } from "./Print";
+import { Resume } from "./Resume";
 import { Link } from "./components/Link";
 
 function App() {
-  if (window.location.hash === "#/print") {
-    return <Print />;
+  if (window.location.hash === "#/resume") {
+    return <Resume />;
   }
 
   return (
@@ -17,7 +17,7 @@ function App() {
         <div className="text-left place-self-center pt-4">
           <Link href="https://github.com/janecakemaster">github</Link>{" "}
           <Link href="https://linkedin.com/in/janecakemaster">linkedin</Link>{" "}
-          <Link href="#/print" target="_blank">
+          <Link href="#/resume" target="_blank">
             resume
           </Link>
         </div>

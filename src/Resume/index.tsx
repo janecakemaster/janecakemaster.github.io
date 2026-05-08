@@ -78,7 +78,7 @@ const roles: Role[] = [
   },
 ];
 
-export function Print() {
+export function Resume() {
   return (
     <div className="print-page">
       <button
@@ -142,4 +142,4 @@ export function Print() {
   );
 }
 
-export default Print;
+export default Resume;
