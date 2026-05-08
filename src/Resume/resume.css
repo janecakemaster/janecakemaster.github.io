@@ -24,17 +24,14 @@
   font-size: 12pt;
   margin: 0;
   letter-spacing: 0.02em;
-  font-weight: bold;
 }
 
 .resume-page .contact {
-  font-size: 8.5pt;
   margin: 4pt 0 0;
 }
 
 .resume-page h2 {
   font-size: 8pt;
-  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   border-bottom: 1px solid #000;
@@ -85,10 +82,6 @@
 }
 
 .resume-page section p {
-  margin: 4pt 0;
-}
-
-.resume-page .education {
   margin: 4pt 0;
 }
 
