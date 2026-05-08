@@ -44,6 +44,7 @@
 
 .print-page .summary {
   margin: 6pt 0;
+  font-style: italic;
 }
 
 .print-page .role {
