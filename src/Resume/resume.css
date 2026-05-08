@@ -33,10 +33,12 @@
 .resume-page h2 {
   font-size: 8pt;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.3em;
   border-bottom: 1px solid #000;
   margin: 10pt 0 4pt;
   padding-bottom: 2pt;
+  text-align: center;
+  font-weight: bold;
 }
 
 .resume-page .summary {
