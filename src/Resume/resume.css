@@ -24,6 +24,8 @@
   font-size: 12pt;
   margin: 0;
   letter-spacing: 0.02em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .resume-page .contact {
