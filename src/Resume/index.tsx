@@ -15,7 +15,7 @@ const roles: Role[] = [
     location: "SF",
     dates: "September 2024 - May 2026",
     bullets: [
-      "Owned the architecture for shared cross-platform infrastructure for interacting with TV and mobile hardware and tracking user activity. Built a decision matrix to compare multiple approaches, got 5+ teams aligned, and shipped the breaking-change migrations.",
+      "Owned the architecture for shared cross-platform infrastructure spanning TV/mobile hardware integration and user activity tracking. Built a decision matrix to compare multiple approaches, got 5+ teams aligned, and shipped the breaking-change migrations.",
       "Designed a hybrid mobile SDK: native app shell, React webview, product UI loaded through an iframe. Wrote the design doc. Led the development of the native bridge with codegen for TypeScript, Kotlin, and Swift types, all enforced in CI.",
       "Stood up the company's on-call and incident management program from scratch. Defined severity levels, escalation, rotations, monitoring, runbooks. Coordinated production incidents as incident commander.",
       "Led A/B experimentation on the conversion funnel. A pricing-display redesign on the TV web checkout drove a 23% lift in subscription starts. A Roku ad-routing test drove 7.3% overall, 19.7% in the strongest segment. Established the team's experimentation framework (ICE scoring, experiment database, prioritization process).",
@@ -27,7 +27,7 @@ const roles: Role[] = [
     location: "Remote",
     dates: "October 2022 - May 2024",
     bullets: [
-      "Built the AWS Marketplace integration, enabling millions in ARR in enterprise deals. Shipped private offers, subscription lifecycle management, entitlement verification, integrated with usage tracking pipeline (ClickHouse via Tinybird → DynamoDB → AWS Marketplace Metering API) to handle contract-with-consumption billing, the messiest pricing model on Marketplace. Three Marketplace products from other teams later built on top of it.",
+      "Built the AWS Marketplace integration, driving millions in ARR through enterprise deals. Shipped private offers, subscription lifecycle management, and entitlement verification. The usage tracking pipeline (ClickHouse via Tinybird → DynamoDB → AWS Marketplace Metering API) handled contract-with-consumption billing, the messiest pricing model on Marketplace. Three Marketplace products from other teams later built on top of it.",
       "Shipped the usage visualization views on Vercel's dashboard, plus broader UX improvements across the product.",
     ],
   },
@@ -46,7 +46,7 @@ const roles: Role[] = [
     location: "Remote",
     dates: "November 2019 - November 2020",
     bullets: [
-      "Tech lead on Sidechat, a real-time collaboration feature inside Gmail that let sales teams discuss email threads without forwarding them around. WebSocket chat, Gmail API to sync threads into collaborators' inboxes, @-mention input, notification badges across the UI.",
+      "Tech lead on Sidechat, a real-time collaboration feature inside Gmail that let sales teams discuss email threads without forwarding or context-switching. WebSocket chat, Gmail API to sync threads into collaborators' inboxes, @-mention input, notification badges across the UI. Featured in the CEO's launch announcement.",
     ],
   },
   {
@@ -55,7 +55,7 @@ const roles: Role[] = [
     location: "NYC",
     dates: "October 2016 - October 2019",
     bullets: [
-      "Contributed to a custom graph database on Redis behind the content platform of multiple high-traffic media sites. Hexastore pattern on Redis sorted sets, traversable in any direction to surface a flexible GraphQL API rich with rich content associations. Leveraged Elasticsearch to surface advanced faceting for editorial content in the CMS.",
+      "Contributed to a custom graph database on Redis behind the content platform of multiple high-traffic media sites. Hexastore pattern on Redis sorted sets, traversable in any direction, backed a flexible GraphQL API rich with content associations. Used Elasticsearch for advanced faceting on editorial content in the CMS.",
     ],
   },
   {
@@ -64,7 +64,7 @@ const roles: Role[] = [
     location: "NYC",
     dates: "November 2015 - October 2016",
     bullets: [
-      "Rebuilt the product detail page (the site's primary revenue page) via additions to legacy Magento/PHP backend to expose variant data and a React frontend with server-side rendering for the image gallery, dynamic variant selection with cascading SKU resolution, server-side rendering.",
+      "Rebuilt the product detail page (the site's primary revenue page) via additions to legacy Magento/PHP backend to expose variant data and a React frontend with server-side rendering for the image gallery, dynamic variant selection with cascading SKU resolution.",
     ],
   },
   {
@@ -73,7 +73,7 @@ const roles: Role[] = [
     location: "NYC",
     dates: "June 2014 - October 2015",
     bullets: [
-      "Relaunched a fresh mobile-first site with a custom JS micro-framework and component library. Powered video playback, profiles, social feed, and payment checkout.",
+      "Relaunched the mobile-first site on a custom JS micro-framework and component library that handled video playback, profiles, social feed, and payment checkout.",
     ],
   },
 ];
