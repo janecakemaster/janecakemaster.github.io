@@ -1,4 +1,4 @@
-import "./print.css";
+import "./resume.css";
 
 type Role = {
   company: string;
@@ -37,7 +37,7 @@ const roles: Role[] = [
     location: "Remote",
     dates: "November 2020 - July 2022",
     bullets: [
-      "Built backend services in Go for a content management and catalog system while keeping it in sync with a legacy system we were migrating from. Shipped an async asset publishing pipeline end-to-end, cutting publishing time and improving marketing of offerings.",
+      "Coordinated the migration from a legacy content management system to a new Go-based stack, keeping both running in sync throughout the transition. Built the new backend services, including an async asset publishing pipeline that cut publishing time and enabled marketer self-service.",
     ],
   },
   {
@@ -80,11 +80,11 @@ const roles: Role[] = [
 
 export function Resume() {
   return (
-    <div className="print-page">
+    <div className="resume-page">
       <button
         type="button"
         onClick={() => window.print()}
-        className="no-print print-btn"
+        className="no-print resume-btn"
       >
         print
       </button>

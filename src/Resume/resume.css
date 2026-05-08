@@ -3,7 +3,7 @@
   margin: 0.3in;
 }
 
-.print-page {
+.resume-page {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 8.5pt;
   line-height: 1.35;
@@ -15,24 +15,24 @@
   text-align: left;
 }
 
-.print-page header {
+.resume-page header {
   text-align: center;
   margin-bottom: 10pt;
 }
 
-.print-page h1 {
+.resume-page h1 {
   font-size: 12pt;
   margin: 0;
   letter-spacing: 0.02em;
   font-weight: bold;
 }
 
-.print-page .contact {
+.resume-page .contact {
   font-size: 8.5pt;
   margin: 4pt 0 0;
 }
 
-.print-page h2 {
+.resume-page h2 {
   font-size: 8pt;
   font-weight: bold;
   text-transform: uppercase;
@@ -42,51 +42,51 @@
   padding-bottom: 2pt;
 }
 
-.print-page .summary {
+.resume-page .summary {
   margin: 6pt 0;
   font-style: italic;
 }
 
-.print-page .role {
+.resume-page .role {
   margin-bottom: 2pt;
   page-break-inside: avoid;
 }
 
-.print-page .role-header {
+.resume-page .role-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 1em;
 }
 
-.print-page .role-title {
+.resume-page .role-title {
   font-weight: bold;
 }
 
-.print-page .role-dates {
+.resume-page .role-dates {
   font-style: italic;
   white-space: nowrap;
 }
 
-.print-page .role ul {
+.resume-page .role ul {
   margin: 3pt 0 0;
   padding-left: 14pt;
   list-style-type: disc;
 }
 
-.print-page .role li {
+.resume-page .role li {
   margin: 2pt 0;
 }
 
-.print-page section p {
+.resume-page section p {
   margin: 4pt 0;
 }
 
-.print-page .education {
+.resume-page .education {
   margin: 4pt 0;
 }
 
-.print-btn {
+.resume-btn {
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -100,24 +100,24 @@
   cursor: pointer;
 }
 
-.print-btn:hover {
+.resume-btn:hover {
   background: #000;
 }
 
-body:has(.print-page) {
+body:has(.resume-page) {
   background: #f5f5f5;
 }
 
-@media print {
-  .no-print {
+@media resume {
+  .no-resume {
     display: none !important;
   }
 
-  body:has(.print-page) {
+  body:has(.resume-page) {
     background: #fff;
   }
 
-  .print-page {
+  .resume-page {
     padding: 0;
     max-width: none;
   }
