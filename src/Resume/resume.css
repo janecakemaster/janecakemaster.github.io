@@ -1,12 +1,12 @@
 @page {
   size: letter;
-  margin: 0.2in;
+  margin: 0.3in;
 }
 
 .resume-page {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 8.5pt;
-  line-height: 1.35;
+  font-size: 9pt;
+  line-height: 1.32;
   color: #000;
   background: #fff;
   max-width: 7.7in;
@@ -32,21 +32,19 @@
   margin: 4pt 0 0;
 }
 
+.resume-page .headline {
+  margin: 6pt 0 0;
+}
+
 .resume-page h2 {
   font-size: 8pt;
   text-transform: uppercase;
   letter-spacing: 0.3em;
   border-bottom: 1px solid #000;
-  margin: 10pt 0 4pt;
+  margin: 8pt 0 3pt;
   padding-bottom: 2pt;
   text-align: center;
   font-weight: bold;
-}
-
-.resume-page .summary {
-  margin: 6pt 0;
-  font-style: italic;
-  text-align: center;
 }
 
 .resume-page .technologies {
@@ -82,7 +80,7 @@
 }
 
 .resume-page .role li {
-  margin: 2pt 0;
+  margin: 1.5pt 0;
 }
 
 .resume-page section p {
@@ -118,6 +116,11 @@ body:has(.resume-page) {
 
   body:has(.resume-page) {
     background: #fff;
+  }
+
+  #root {
+    padding: 0;
+    max-width: none;
   }
 
   .resume-page {

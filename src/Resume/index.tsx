@@ -10,15 +10,28 @@ type Role = {
 
 const roles: Role[] = [
   {
+    company: "Vitalize",
+    title: "Senior Product Engineer",
+    location: "Remote",
+    dates: "May 2026 - Present",
+    bullets: [
+      "Led the rebuild of incident response: critical alerts now open an incident and page on-call, where no alert had opened any of 82 earlier incidents. Added required CI checks and postmortems with tracked action items.",
+      "Engineering lead for notifications: 750k messages a month to 15,000 staff. Priced the vendor against two others and a self-built AWS option: it cost about a third of what the team assumed, so we kept it.",
+      "Built an agent skill that drafts technical design docs adopted quickly by teammates. Also built AI tools that tell the author of the PR behind each fixed bug, and answer product questions with a cited test for every claim.",
+      "Moved all 31 notification workflows into version-controlled code with a PR check and drift check, which found unused workflows and bugs where the wrong people were notified.",
+      "Built 4 components for the shared design system (popover, tag, filter chips, show-all toggle) and set up AI coding agents to keep new code on it.",
+    ],
+  },
+  {
     company: "Weekend (formerly Volley)",
-    title: "Engineering Manager / Technical Lead (promoted Sept 2025)",
+    title: "Senior Engineer, then EM of 5 from Sep 2025",
     location: "SF",
     dates: "September 2024 - May 2026",
     bullets: [
-      "Owned the architecture for shared cross-platform infrastructure spanning TV/mobile hardware integration and user activity tracking. Built a decision matrix to compare multiple approaches, got 5+ teams aligned, and shipped the breaking-change migrations.",
-      "Designed a hybrid mobile SDK: native app shell, React webview, product UI loaded through an iframe. Wrote the design doc. Led the development of the native bridge with codegen for TypeScript, Kotlin, and Swift types, all enforced in CI.",
-      "Stood up the company's on-call and incident management program from scratch. Defined severity levels, escalation, rotations, monitoring, runbooks. Coordinated production incidents as incident commander.",
-      "Led A/B experimentation on the conversion funnel. A pricing-display redesign on the TV web checkout drove a 23% lift in subscription starts. A Roku ad-routing test drove 7.3% overall, 19.7% in the strongest segment. Established the team's experimentation framework (ICE scoring, experiment database, prioritization process).",
+      "Tech lead for a launch of 3 games on 3 TV platforms across 19 services. All 9 combinations shipped on the original date. Also shipped company-wide on-call: rotations, escalation, and runbooks.",
+      "Owned the architecture for shared TV, mobile, and activity-tracking infrastructure and aligned 5+ teams on the breaking migrations. The tracking work became the base for company-wide analytics.",
+      "Designed a hybrid mobile SDK (native shell, React webview) that 5+ games run their controllers on, with TypeScript, Kotlin, and Swift types generated from one source.",
+      "Led subscription experiments. One lifted subscription starts 23%. Within 24 hours, caught a variant that cut conversion 40%, and reverted it.",
     ],
   },
   {
@@ -27,8 +40,8 @@ const roles: Role[] = [
     location: "Remote",
     dates: "October 2022 - May 2024",
     bullets: [
-      "Built the AWS Marketplace integration, driving millions in ARR through enterprise deals. Shipped private offers, subscription lifecycle management, and entitlement verification. The usage tracking pipeline (ClickHouse via Tinybird → DynamoDB → AWS Marketplace Metering API) handled contract-with-consumption billing, the messiest pricing model on Marketplace. Three Marketplace products from other teams later built on top of it.",
-      "Shipped the usage visualization views on Vercel's dashboard, plus broader UX improvements across the product.",
+      "Built Vercel's AWS Marketplace sales channel from scratch in ~7 months, enabling millions in enterprise deals.",
+      "Designed its contract-with-consumption billing, which other teams reused for 3 later Marketplace products.",
     ],
   },
   {
@@ -37,7 +50,7 @@ const roles: Role[] = [
     location: "Remote",
     dates: "November 2020 - July 2022",
     bullets: [
-      "Coordinated the migration from a legacy content management system to a new Go-based stack, keeping both running in sync throughout the transition. Built the new backend services, including an async asset publishing pipeline that cut publishing time and enabled marketer self-service.",
+      "Kept a legacy CMS and its new Go replacement in sync through the migration. Wrote the RFC for an async publishing pipeline and shipped it, cutting publishing time from a few minutes to below 10 seconds.",
     ],
   },
   {
@@ -46,7 +59,7 @@ const roles: Role[] = [
     location: "Remote",
     dates: "November 2019 - November 2020",
     bullets: [
-      "Tech lead on Sidechat, a real-time collaboration feature inside Gmail that let sales teams discuss email threads without forwarding or context-switching. WebSocket chat, Gmail API to sync threads into collaborators' inboxes, @-mention input, notification badges across the UI. Featured in the CEO's launch announcement.",
+      "Tech lead on Sidechat, chat inside Gmail threads that only added collaborators can see (WebSockets, Gmail API sync). Launched as a paid enterprise feature and still in the product in 2026.",
     ],
   },
   {
@@ -55,7 +68,7 @@ const roles: Role[] = [
     location: "NYC",
     dates: "October 2016 - October 2019",
     bullets: [
-      "Contributed to a custom graph database on Redis behind the content platform of multiple high-traffic media sites. Hexastore pattern on Redis sorted sets, traversable in any direction, backed a flexible GraphQL API rich with content associations. Used Elasticsearch for advanced faceting on editorial content in the CMS.",
+      "Developed the custom Redis graph database behind BDG's sites (nearly 50M monthly readers). Removed N+1 queries with batched GraphQL reads and ran Elasticsearch reindexing with zero downtime.",
     ],
   },
   {
@@ -64,7 +77,7 @@ const roles: Role[] = [
     location: "NYC",
     dates: "November 2015 - October 2016",
     bullets: [
-      "Rebuilt the product detail page (the site's primary revenue page) via additions to legacy Magento/PHP backend to expose variant data and a React frontend with server-side rendering for the image gallery, dynamic variant selection with cascading SKU resolution.",
+      "Redesigned the product detail page, the site's main revenue page, and the navbar, and built the design system behind them.",
     ],
   },
   {
@@ -72,9 +85,7 @@ const roles: Role[] = [
     title: "Associate Application Engineer",
     location: "NYC",
     dates: "June 2014 - October 2015",
-    bullets: [
-      "Relaunched the mobile-first site on a custom JS micro-framework and component library that handled video playback, profiles, social feed, and payment checkout.",
-    ],
+    bullets: [],
   },
 ];
 
@@ -92,21 +103,23 @@ export function Resume() {
       <header>
         <h1>Jane Kim</h1>
         <p className="contact">
-          janecakemaster@gmail.com · github.com/janecakemaster ·
-          linkedin.com/in/janecakemaster
+          Arizona · Remote · janecakemaster@gmail.com ·
+          github.com/janecakemaster · linkedin.com/in/janecakemaster
+        </p>
+        <p className="headline">
+          Engineer who builds the shared systems other teams ship on: tracking
+          and a mobile SDK at Weekend, AWS Marketplace billing at Vercel, and
+          notifications at Vitalize. Shipped company-wide incident response and
+          on-call at Weekend and Vitalize.
         </p>
       </header>
 
       <section>
-        <p className="summary">
-          Tech lead and engineering leader building end-to-end across design
-          systems, web apps, APIs, and distributed backends with or without AI
-          in the loop.
-        </p>
         <p className="technologies">
           <strong>Technologies:</strong> TypeScript, Node.js, React, GraphQL,
-          RPC/Protobufs, REST, AWS (Lambda, DynamoDB, CloudFront, S3, SQS/SNS),
-          Redis, Elasticsearch, ClickHouse, PostgreSQL, WebSockets, CI/CD
+          RPC/Protobufs, REST, AWS, Go, Redis, Elasticsearch, ClickHouse,
+          PostgreSQL, WebSockets, Effect, OpenTelemetry, Grafana, AI coding
+          tools (Claude Code, agent skills)
         </p>
       </section>
 
@@ -136,6 +149,14 @@ export function Resume() {
         <p className="education">
           <strong>Bachelor's in Computer Science</strong>, Columbia University,
           NYC
+        </p>
+      </section>
+
+      <section>
+        <h2>Community</h2>
+        <p>
+          Talks: JSConf US 2015, NodeConf Oslo 2016 · CodeNation, NodeSchool,
+          Girls Who Code · ERG leadership
         </p>
       </section>
     </div>
